@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;} /*reset*/
+        .cul{
+            display: flex;
+            flex-flow: row wrap;
+            width: 400px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .cul span{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center; /*좌우 중앙 배치*/
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 100px; /*상하 중앙 배치*/
+            cursor: pointer;
+        }
+        .cul span:hover{
+            background: rgba(225, 0, 0, 0.1);
+        }
+        .cul input{
+            width: 400px;
+            height: 100px;
+            font-weight: 900;
+            font-size: 32px;
+            text-align: right;
+            border: 1px solid black;
+        }
+        .cul span:nth-of-type(14){
+            width:300px;
+        }
+        .cul span:last-of-type{
+            width:400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cul">
+        <input type="text" id="screen">
+        <span onclick="fnAcc(1)">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>+</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>-</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>*</span>
+        <span>0</span>
+        <span>/</span>
+        <span>=</span>
+
+        <script>
+            let elScr = document.querySelector('#screen')
+            let elSpn = document.querySelectorAll('span')
+            
+            let num01 = 0; //전역변수 선언
+            let num02 = 0;
+            let oper = ''; //string형 변수 선언 및 초기화
+            //null은 타입이 어케 됨 ''랑 많이 다른가
+
+            let result = null; 
+            //result랑 elScr 변수를 왜 두개씩 선언하는거임 둘 다 종료값아님?
+            
+
+            elsSpn[1]
+
+            function fnAcc(num){
+            elScr.value += num;
+            if(num>='0' && num<='9'){
+                if(oper==null){
+                    num01 += num;
+                }else{ //네?? 부호인데 누적을 해여? 아.. 일단 네..
+                    num02 += num;
+                }
+            } else if(num == '+' ||num == '-' || num == '*' || num == '/' ){
+                oper = num;
+            }
+        </script>
+    </div>
+</body>
+</html> 

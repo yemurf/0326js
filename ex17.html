@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수의 매개변수, 리턴</h1>
+    <h2>매개변수</h2>
+    <p>함수 호출할 때 전달하는 변수</p>
+    <script>
+        function sum(num01, num02, num03, num04, num05) { 
+            //매개변수 num01,num02 선언
+            num01 = Number(num01);
+            num02 = Number(num02);
+            num03 = Number(num03);
+            num04 = Number(num04);
+            num05 = Number(num05);
+            
+            console.log(num01+num02+num03+num04+num05)
+        }
+        sum(10,5); //10,5를 매개변수 num01,num02에게 전달
+        //매개변수 값은 funcion밖에서 지정해야 하나
+        sub(10,5);
+        sum(1,10,100);
+
+        function sub(num01,num02){
+            num01 = changeNum(num01); //매개변수에 함수를 저장해서 사용
+            num02 = changeNum(num02); //매개변수 통해서 값을 함수에 저장
+            //두 줄 익명함수인가?ㄴㄴ
+            let result = num01 - num02;
+            return result;
+        }
+
+
+        let result = sub(10,5);
+    </script>
+</body>
+</html>
