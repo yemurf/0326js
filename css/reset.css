@@ -1,0 +1,10 @@
+html,head,body,h1,h2,h3,h4,h5,h6,p,img,a,ul,ol,li,form,input,label,select,textarea,div,span,fieldset,legend,picture,video,audio,option,optgroup,button,strong,em,header,section,footer,aside,article,main,hr,br,address,table,thead,tbody,tfoot,tr,th,td,figure{box-sizing:border-box;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-weight:inherit;font-size:inherit;}
+img,picture,video{width:100%;vertical-align:bottom;}
+a{color:inherit;text-decoration:none;}
+ul,ol,li{list-style:none;}
+form,input,label,select,text-area,button{display:block;}
+table,tr,th,td{border:1px solid #000;border-collapse:collapse;}
+em,address{font-style:normal;}
+.after::after,.before::before{content:'';display:block;}
+.clearfix::after{content:'';display:block;clear:both;}
